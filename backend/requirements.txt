@@ -1,0 +1,7 @@
+fastapi
+fastapi_cors
+uvicorn
+httpx
+pydantic
+python-dotenv
+pydantic-settings
