@@ -210,6 +210,7 @@ tempCodeRunnerFile.py
 
 # PyPI configuration file
 .pypirc
+.static/
 
 # Marimo
 marimo/_static/
@@ -363,5 +364,25 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
 
-backend/Transfer Posting.zip
-app.py
+*.tmp
+
+# Word temporary
+~$*.doc*
+~$*.dot*
+
+# Word Auto Backup File
+Backup of *.doc*
+
+# Excel temporary
+~$*.xls*
+
+# Excel Backup File
+*.xlk
+*.csv
+*.zip
+
+# PowerPoint temporary
+~$*.ppt*
+
+# Visio autosave temporary files
+*.~vsd*

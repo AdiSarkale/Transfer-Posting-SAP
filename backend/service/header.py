@@ -2,7 +2,11 @@ from fastapi import HTTPException
 def header(session,headerText):
     try:
         print('in header')
-        session.findById("wnd[0]/usr/ssubSUB_MAIN_CARRIER:SAPLMIGO:0007/subSUB_FIRSTLINE:SAPLMIGO:0011/cmbGODYNPRO-ACTION").key = "A08"
+        try:
+            session.findById("wnd[0]/usr/ssubSUB_MAIN_CARRIER:SAPLMIGO:0003/subSUB_FIRSTLINE:SAPLMIGO:0011/cmbGODYNPRO-ACTION").key = "A08"
+        except:
+            session.findById("wnd[0]/usr/ssubSUB_MAIN_CARRIER:SAPLMIGO:0007/subSUB_FIRSTLINE:SAPLMIGO:0011/cmbGODYNPRO-ACTION").key = "A08"
+
         print('A08')
         session.findById("wnd[0]/usr/ssubSUB_MAIN_CARRIER:SAPLMIGO:0007/subSUB_FIRSTLINE:SAPLMIGO:0011/cmbGODYNPRO-REFDOC").key = "R10"
         print('R10')
