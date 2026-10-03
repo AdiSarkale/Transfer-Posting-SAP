@@ -1,188 +1,80 @@
-# 🚚 SAP Material Transfer Posting Automation
+# SAP Material Transfer Posting Automation
 
-An end-to-end SAP GUI automation tool built with **Python**, **Flask**, and **React** to automate Material Transfer Posting transactions in SAP. The application provides a user-friendly web interface for entering transfer details and performs the complete SAP transaction using SAP GUI Scripting.
+> **Copyright & Usage Notice**  
+> Copyright © 2026 Aditya Sarkale. All rights reserved **to the extent of rights owned by the author**.  
+> No license is granted to copy, modify, redistribute, publish, sublicense, or use this source code or substantial portions of it outside the GitHub platform without prior written permission from the applicable rights holder.  
+> **Important:** Any company-owned, client-owned, SAP-proprietary, third-party, or otherwise restricted material remains subject to its applicable ownership, confidentiality, and licensing terms.
 
----
+## Overview
+An end-to-end SAP GUI automation application built with **Python, Flask and React** to automate material transfer-posting workflows through SAP GUI Scripting.
 
-## ✨ Features
+## Workflow
+1. Launch SAP GUI and log in.
+2. Start the Flask backend.
+3. Start the React frontend.
+4. Enter material transfer details.
+5. Submit the request.
+6. The backend connects to the active SAP GUI session.
+7. SAP GUI Scripting performs the required transaction steps.
+8. Success/error information is returned to the frontend.
+9. Validate the posting in SAP.
 
-- Material Transfer Posting Automation
-- SAP GUI Scripting Integration
-- Modern React Frontend
-- Flask REST API Backend
-- Real-time Form Validation
-- Loading Indicators
-- Error Handling & User-Friendly Messages
-- Dynamic Material Entry
-- Date Formatting & Validation
-- CSV Upload Support (if enabled)
-- Automated SAP Navigation
-- CORS Enabled API
-
----
-
-## 🛠 Tech Stack
-
-### Frontend
-- React
-- Vite
-- Tailwind CSS
-- Axios
-
-### Backend
+## Technology
 - Python
-- Flask
-- Flask-CORS
+- Flask / Flask-CORS
 - pywin32
 - SAP GUI Scripting API
+- React / Vite
+- Axios
+- JavaScript / CSS
 
----
-
-## 📂 Project Structure
-
-```
-Transfer-Posting-SAP
-│
-├── frontend/
-│   ├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-│
-├── backend/
-│   ├── routes/
-│   ├── services/
-│   ├── helpers/
-│   ├── SAP Scripts/
-│   └── app.py
-│
-└── README.md
-```
-
----
-
-## ⚙️ Prerequisites
-
-Before running the project, ensure you have:
-
+## Prerequisites
+- Windows
+- SAP GUI for Windows
+- SAP GUI Scripting enabled
 - Python 3.10+
 - Node.js 18+
-- SAP GUI Installed
-- SAP GUI Scripting Enabled
-- Valid SAP Credentials
+- Appropriate SAP authorization
 
-SAP GUI Scripting must be enabled both on the SAP Client and SAP Server.
-
----
-
-## 🚀 Installation
-
-### Clone Repository
-
-```bash
-git clone https://github.com/AdiSarkale/Transfer-Posting-SAP.git
-
-cd Transfer-Posting-SAP
+## Structure
+```
+frontend/      React/Vite UI
+backend/       Flask API and SAP automation
+README.md      Project documentation
 ```
 
----
+## Installation
 
 ### Backend
-
-```bash
+```powershell
 cd backend
-
 python -m venv venv
-
 venv\Scripts\activate
-
 pip install -r requirements.txt
-
 python app.py
 ```
 
-Backend runs on
-
-```
-http://localhost:8080
-```
-
----
-
 ### Frontend
-
-```bash
+```powershell
 cd frontend
-
 npm install
-
 npm run dev
 ```
 
-Frontend runs on
+Use the ports configured in the current source code if they differ from the defaults.
 
-```
-http://localhost:5173
-```
+## Troubleshooting
+If the application reports **"SAP not logged in or User cancelled the transaction"** while SAP is visibly logged in:
+1. Open RZ11.
+2. Check the required dynamic SAP GUI scripting parameter.
+3. Confirm the parameter is set to **TRUE**.
+4. Check the active SAP GUI session and whether the transaction was cancelled.
+5. Escalate server-side configuration changes to SAP Basis.
 
----
+If the web application is inaccessible, follow the organization's internal server/startup procedure. Do not place internal server credentials or confidential infrastructure details in this public repository.
 
-## 🔄 Workflow
+## Security
+Never commit SAP passwords, tokens, cookies, confidential exports or company/client data.
 
-1. Launch SAP GUI and login.
-2. Start the Flask backend.
-3. Run the React frontend.
-4. Enter Transfer Posting details.
-5. Submit the transaction.
-6. The backend connects to the active SAP session.
-7. SAP GUI Scripting executes the transfer posting automatically.
-8. Success/Error response is returned to the frontend.
-
----
-
-## 📸 Application Features
-
-- Material Selection
-- Plant Selection
-- Storage Location
-- Quantity Entry
-- Posting Date Validation
-- Automated SAP Navigation
-- Success & Error Notifications
-- Responsive UI
-
----
-
-## 🧠 Concepts Used
-
-- SAP GUI Automation
-- COM Automation (pywin32)
-- REST APIs
-- React Hooks
-- Component-Based Architecture
-- Axios API Calls
-- Flask Routing
-- Error Handling
-- Dynamic Forms
-
----
-
-## 🔒 Disclaimer
-
-This project is intended for educational and internal enterprise automation purposes only.
-
-No SAP proprietary code or confidential business logic is included in this repository.
-
----
-
-## 👨‍💻 Author
-
-**Aditya Sarkale**
-
-GitHub: https://github.com/AdiSarkale
-
-LinkedIn: www.linkedin.com/in/aditya-sarkale-backend
-
----
-
-## ⭐ If you found this project useful, consider giving it a Star.
+## Author
+**Aditya Sarkale** — https://github.com/AdiSarkale
